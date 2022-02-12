@@ -1,0 +1,22 @@
+<resources>
+   <!-- <string name="app_name">PasswordSaver</string>-->
+   <string name="enter_title">Enter Title</string>
+   <string name="title">Title</string>
+   <string name="enter_description">Enter Description</string>
+   <string name="description">Description</string>
+   <string name="time">Time</string>
+   <string name="time_hint">HH:MM</string>
+   <string name="date">Date</string>
+   <string name="date_hint">dd-MM-yyyy</string>
+   <string name="type">Type</string>
+   <string name="daily">Daily</string>
+   <string name="weekly">Weekly</string>
+   <string name="create_todo">Create Todo</string>
+   <string name="update_todo">Update ToDo</string>
+   <string name="enter_email">Enter Email</string>
+   <string name="email">email</string>
+   <string name="enter_password">Enter password</string>
+   <string name="password">password</string>
+   <string name="login">Login</string>
+   <string name="no_todo">No Todos available!!!</string>
+</resources>

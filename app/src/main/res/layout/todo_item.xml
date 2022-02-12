@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:id="@+id/todoItemLayout"
+    android:background="@drawable/rounded_corner"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="5dp"
+    android:layout_height="wrap_content">
+
+     <View
+         android:layout_width="4dp"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         android:background="@drawable/background_indicator"
+          app:layout_constraintBottom_toBottomOf="parent"
+         android:layout_height="0dp"/>
+
+    <TextView
+        android:id="@+id/todoItemTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_weight="1"
+        android:text="@string/title"
+        android:fontFamily="@font/averiasanslibre_bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/extra_large_text"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/todoItem_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:fontFamily="@font/averiasanslibre_bold"
+        android:textColor="#4A4848"
+        android:textSize="@dimen/large_text"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/todoItemTitle" />
+
+    <TextView
+        android:id="@+id/todoItemDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:fontFamily="@font/averiasanslibre_bold"
+        android:textColor="#4A4848"
+        android:textSize="@dimen/large_text"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/todoItem_desc" />
+
+    <TextView
+        android:id="@+id/todoItemType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/type"
+        android:fontFamily="@font/averiasanslibre_bold"
+        android:textColor="#4A4848"
+        android:textSize="@dimen/large_text"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/todoItemDateTime" />
+
+
+    <ImageView
+        android:id="@+id/itemDelete"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:checked="false"
+        android:src="@drawable/ic_baseline_delete_24"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/todoItem_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
