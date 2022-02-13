@@ -15,6 +15,7 @@ import com.shivichu.passwordsaver.R
 import com.shivichu.passwordsaver.database.entity.Todo
 import com.shivichu.passwordsaver.databinding.FragmentUpdateTodoBinding
 import com.shivichu.passwordsaver.delegate.AppOrientation
+import com.shivichu.passwordsaver.view.activity.BaseHomeActivity
 import com.shivichu.passwordsaver.view.base.BaseFragment
 import com.shivichu.passwordsaver.viewModel.ToDoViewModel
 import com.sof.retail.viewModel.common.kodeinViewModel
@@ -154,6 +155,7 @@ class UpdateTodoFragment : BaseFragment(), KodeinAware {
 
         if (updateTitle.isNotEmpty() && updateDesc.isNotEmpty()) {
             val updatedTodoItem = Todo(mReceivedData!!.id, updateTitle, updateDesc,time,date,mType)
+            (activity as BaseHomeActivity).startAlarmBroadcastReceiver(requireContext(), updatedTodoItem)
             todoViewModel.updateTodo(updatedTodoItem).observe(viewLifecycleOwner,{
                 Log.e("Observer : ",it.toString())
                 if(it) {

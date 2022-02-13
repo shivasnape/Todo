@@ -20,6 +20,17 @@ import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.kodein
 import java.text.SimpleDateFormat
 import java.util.*
+import android.app.AlarmManager
+
+import android.app.PendingIntent
+import android.content.Context
+
+import android.content.Intent
+import android.util.Log
+import com.google.gson.Gson
+import com.shivichu.passwordsaver.receiver.AlarmReceiver
+import com.shivichu.passwordsaver.view.activity.BaseHomeActivity
+
 
 class AddNewTodoFragment : BaseFragment(), KodeinAware {
 
@@ -114,6 +125,7 @@ class AddNewTodoFragment : BaseFragment(), KodeinAware {
         if (todoTitle.isNotEmpty() && todoDesc.isNotEmpty()) {
             val todoItem = Todo(0, todoTitle, todoDesc, time,date,mType)
             todoViewModel.insertTodo(todoItem)
+            (activity as BaseHomeActivity).startAlarmBroadcastReceiver(requireContext(), todoItem)
            showToast("Successfully Added")
             findNavController().navigate(R.id.action_goto_list_todo)
         } else {
