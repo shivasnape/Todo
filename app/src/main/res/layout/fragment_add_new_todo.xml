@@ -173,6 +173,7 @@
                 android:checked="false"
                 android:fontFamily="@font/averiasanslibre_bold"
                 android:text="@string/daily"
+                android:textColor="@color/black"
                 android:textSize="@dimen/normal_text" />
 
             <RadioButton
@@ -184,6 +185,7 @@
                 android:checked="false"
                 android:fontFamily="@font/averiasanslibre_bold"
                 android:text="@string/weekly"
+                android:textColor="@color/black"
                 android:textSize="@dimen/normal_text" />
         </RadioGroup>
 
